@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    /* Evita rolagem horizontal */
+
+    /*
+    background-color: rgba(0, 0, 100, 0.8);
+    background-color: rgba(0, 0, 46, 0.8);
+  
+    background: rgba(0, 0, 100, 0.8); */
+    
+    /* background: linear-gradient(0deg, rgb(177, 98, 211) 60%, rgb(193, 50, 255) 90%); */
+  
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(0, 0, 148)), to(rgb(4, 4, 36))) fixed;
+    
+    /* 0% indica o início do gradiente, e 100% indica o final */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* vvv TEMA DO SITE vvv */
+body[data-theme="t-light"] {
+    /* --color-bg: #ffffff7a; */
+    --color-bg2: #fff;
+    --color-text: rgb(0, 0, 0);
+}
+
+body[data-theme="t-dark"] {
+    --color-bg: black;
+    --color-bg2: black;
+    --color-text: #f2f2f2;
+
+}
+
+/* ^^^ TEMA DO SITE ^^^*/
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #23232e;
+}
+
+body::-webkit-scrollbar-thumb {
+    height: 15px;
+    width: 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 5px solid #ffffff;
+}
+
+/* HEADER */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(4, 4, 36);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    display: flex; /* Usando flexbox */
+
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.6s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background-color: rgba(0, 0, 136, 0.8);
+    color: #c0c0c0;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+
+/*
+.navbar a.active {
+    background-color: rgba(0, 0, 136, 0.8);
+}
+*/
+
+/* MAIN */
+
+/* PARALLAX */
+.parallax {
+    /* Imagem de fundo com efeito parallax */
+    background-image: url('images/space.jpg');
+    background-color: black;
+    opacity: 80%;
+    height: 80vh;
+    /* Ajuste a altura conforme necessário */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+}
+
+.div-image-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* Ocupa toda a altura do parallax */
+}
+
+.image-logo {
+    max-height: 400px;
+    /* Ajusta a altura máxima da imagem */
+    max-width: 100%;
+    /* Ajusta a largura máxima da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    width: auto;
+    /* Mantém a proporção da imagem */
+}
+
+.div-image-logo img {
+    transition: transform 1s ease; /* Suave efeito de transição */
+}
+
+.div-image-logo:hover img {
+    transform: scale(1.15); /* Aumenta a escala da imagem para 1.1 */
+}
+
+.main-main{
+
+}
+
+.content {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.section-page-title{
+    padding-top: 7%;
+}
+/*
+.section-gray {
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+} */
+
+.section-gray h2 {
+    color: #333;
+}
+
+#Home {
+    height: 92vh;
+}
+
+#Sobre {
+    height: 112vh;
+    margin-left: 2%;
+}
+
+#Serviços {
+    height: 112vh;
+    margin-left: 2%;
+}
+
+#Contato {
+    height: 112vh;
+    margin-left: 2%;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    height: 32vh;
+    width: 100%;
+}
+
